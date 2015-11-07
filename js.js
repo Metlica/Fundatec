@@ -9,6 +9,9 @@ function validarFormulario() {
 
     var repitasenha = form["fsenha2"].value;
 
+    var v = validacampo
+
+
     if (validacampo(nome, "prencha seu nome") &&
         validacampo(email, "preencha seu email") &&
         validacampo(senha, "prencha sua senha") &&
@@ -29,7 +32,7 @@ function validacampo(campo, mensagem) {
     }
     return true;
 }
-    
+
 function validasenha(senha, repitasenha) {
     if (senha != repitasenha) {
         alert("O seguinte cara, as senha tem que ser iguais flw valeu");
@@ -37,4 +40,47 @@ function validasenha(senha, repitasenha) {
     }
     return true;
 }
-        
+
+function soma() {
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        soma += arguments[i];
+    }
+    return total;
+    //alert(total);
+}
+
+function executa(numero, operacao) {
+    alert(operacao(numero, numero))
+}
+
+function multiplicacao(x, y) {
+    return x * y;
+}
+
+var car = {
+    marca: "Fiat",
+    modelo: "500",
+    ano: 2010,
+    cor: "Azul"
+};
+
+function carshow() {
+    var uno = new carro("Fiat", "UNO");
+    var gol = uno;
+    gol.modelo = "gol";
+    uno.show();
+    gol.show();
+    //    var gol = new carro("VW", "Gol");
+    //    gol.show();
+
+}
+
+function carro(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+}
+
+carro.prototype.show = function () {
+    alert(this.modelo);
+}
