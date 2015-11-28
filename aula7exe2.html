@@ -2,27 +2,25 @@
 
 <head>
     <title>Cadastro</title>
-    <script src="js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" <script src='JareUtils.js'></script>
+    <script src="javaScript.js"></script>
 </head>
 
 <body>
-    <form name="cadastroForm" onsubmit="return validarFormulario()">
+    <form name="cadastroForm">
         Nome:
-        <input type="text" name="fname">
+        <input class="rquired" type="text " name="fname " placeholder="Informe seu Nome">
         <br> Email:
-        <input type="text" name="femail">
+        <input class="rquired" type="text " name="femail " placeholder="Informe seu Email">
         <br> Senha:
-        <input type="password" name="fsenha1">
+        <input class="rquired" type="password " name="fsenha1 " placeholder="Digite sua senha">
         <br> Repita:
-        <input type="password" name="fsenha2">
+        <input class="rquired" type="password " name="fsenha2 " placeholder="Digite novamente sua senha">
         <br>
-        <button type="submit">Salvar</button>
+        <button type="submit ">Salvar</button>
     </form>
 
-    <button onclick="soma(1,1,2)">soma</button>
-    <button onclick="executa(5,multiplicacao)">executa</button>
-    <button onclick="carshow()">Carro</button>
-    <button onclick="this.innerHTML=Date()">Agora são ?</button>
+
 
 </body>
 
